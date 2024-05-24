@@ -1,0 +1,62 @@
+[2024-05-23 17:43:28] [ ERROR] [BD:31] Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "C:/Users/maria/clinicaOdontO.mv.db"
+Unsupported database file version or invalid file header in file "C:/Users/maria/clinicaOdontO.mv.db" [90048-214]
+[2024-05-23 17:43:28] [ ERROR] [OdontologoDAOH2:40] Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "C:/Users/maria/clinicaOdontO.mv.db"
+Unsupported database file version or invalid file header in file "C:/Users/maria/clinicaOdontO.mv.db" [90048-214]
+[2024-05-23 17:43:28] [ ERROR] [OdontologoDAOH2:40] Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "C:/Users/maria/clinicaOdontO.mv.db"
+Unsupported database file version or invalid file header in file "C:/Users/maria/clinicaOdontO.mv.db" [90048-214]
+[2024-05-23 17:43:28] [ ERROR] [OdontologoDAOH2:63] Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "C:/Users/maria/clinicaOdontO.mv.db"
+Unsupported database file version or invalid file header in file "C:/Users/maria/clinicaOdontO.mv.db" [90048-214]
+[2024-05-23 17:44:48] [ INFO ] [BD:29] Tablas creada con exito
+[2024-05-23 17:44:48] [ INFO ] [OdontologoDAOH2:37] Odonologo guardado correctamente
+[2024-05-23 17:44:48] [ INFO ] [OdontologoDAOH2:37] Odonologo guardado correctamente
+[2024-05-23 17:44:48] [ INFO ] [OdontologoDAOH2:61] Odontologos encontrados
+[2024-05-23 17:44:53] [ INFO ] [BD:29] Tablas creada con exito
+[2024-05-23 17:44:53] [ INFO ] [OdontologoDAOH2:37] Odonologo guardado correctamente
+[2024-05-23 17:44:53] [ INFO ] [OdontologoDAOH2:37] Odonologo guardado correctamente
+[2024-05-23 17:44:53] [ INFO ] [OdontologoDAOH2:61] Odontologos encontrados
+[2024-05-23 17:44:53] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-23 17:44:53] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-23 17:45:01] [ INFO ] [BD:29] Tablas creada con exito
+[2024-05-23 17:45:01] [ INFO ] [PacienteDAOH2:53] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-23 17:48:14] [ ERROR] [BD:34] Columna "EMAIL" no encontrada
+Column "EMAIL" not found; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1,'jorge.pereyra@digitalhouse.com'), ('German','Fraire','22222','2024-05-10',2,'german@german.com'); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay') [42122-214]
+[2024-05-23 17:48:14] [ INFO ] [PacienteDAOH2:53] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-23 17:49:24] [ INFO ] [BD:32] Tablas creada con exito
+[2024-05-23 17:49:24] [ INFO ] [PacienteDAOH2:53] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-23 17:49:24] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 2
+[2024-05-23 18:08:36] [ ERROR] [BD:34] Error de Sintaxis en sentencia SQL "INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1, 'jorgito@jorgito.com'), ('German','Fraire','22222','2024-05-10',2, german[*]@german.com); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay')"; se esperaba "(, ., [, ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, ,, )"
+Syntax error in SQL statement "INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1, 'jorgito@jorgito.com'), ('German','Fraire','22222','2024-05-10',2, german[*]@german.com); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay')"; expected "(, ., [, ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, ,, )"; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1, 'jorgito@jorgito.com'), ('German','Fraire','22222','2024-05-10',2, german@german.com); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay') [42001-214]
+[2024-05-23 18:08:36] [ INFO ] [PacienteDAOH2:54] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-23 18:09:16] [ ERROR] [BD:34] Error de Sintaxis en sentencia SQL "INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1, 'jorgito@jorgito.com'), ('German','Fraire','22222','2024-05-10',2, german[*]@german.com); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay')"; se esperaba "(, ., [, ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, ,, )"
+Syntax error in SQL statement "INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1, 'jorgito@jorgito.com'), ('German','Fraire','22222','2024-05-10',2, german[*]@german.com); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay')"; expected "(, ., [, ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, ,, )"; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1, 'jorgito@jorgito.com'), ('German','Fraire','22222','2024-05-10',2, german@german.com); INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay') [42001-214]
+[2024-05-23 18:09:16] [ INFO ] [PacienteDAOH2:54] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-23 18:10:03] [ INFO ] [BD:32] Tablas creada con exito
+[2024-05-23 18:10:03] [ INFO ] [PacienteDAOH2:54] iniciando la operacion de buscado de un paciente con id : 2
+[2024-05-23 18:10:03] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 2
+[2024-05-23 18:21:01] [ INFO ] [BD:32] Tablas creada con exito
+[2024-05-23 18:21:01] [ INFO ] [PacienteDAOH2:92] Iniciando busqueda por email: jorgito@jorgito.com
+[2024-05-23 18:21:01] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-23 18:34:40] [ INFO ] [PacienteDAOH2:92] Iniciando busqueda por email: jorgito@jorgito.com
+[2024-05-23 18:34:40] [ ERROR] [PacienteDAOH2:111] Table "PACIENTES" not found (this database is empty); SQL statement:
+SELECT * FROM PACIENTES WHERE EMAIL=? [42104-214]
+[2024-05-23 18:35:47] [ INFO ] [BD:32] Tablas creada con exito
+[2024-05-23 18:35:56] [ INFO ] [PacienteDAOH2:92] Iniciando busqueda por email: jorgito@jorgito.com
+[2024-05-23 18:35:56] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-23 18:58:18] [ INFO ] [BD:32] Tablas creada con exito
+[2024-05-23 18:58:18] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-23 18:58:18] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 2
+[2024-05-23 18:59:15] [ INFO ] [BD:32] Tablas creada con exito
+[2024-05-23 18:59:15] [ INFO ] [PacienteDAOH2:52] Iniciado la busqueda de todos los pacientes
+[2024-05-23 18:59:15] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-23 18:59:15] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 2
+[2024-05-23 19:10:29] [ INFO ] [BD:32] Tablas creada con exito
+[2024-05-23 19:14:55] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-23 19:15:10] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-23 19:15:10] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-23 19:15:16] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-23 19:15:16] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-23 19:15:25] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-23 19:15:25] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
