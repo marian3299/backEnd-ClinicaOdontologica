@@ -111,3 +111,56 @@ SELECT * FROM PACIENTES WHERE EMAIL=? [42104-214]
 [2024-05-27 13:35:43] [ INFO ] [OdontologoDAOH2:61] Odontologos encontrados
 [2024-05-27 13:36:18] [ INFO ] [OdontologoDAOH2:37] Odonologo guardado correctamente
 [2024-05-27 13:36:24] [ INFO ] [OdontologoDAOH2:61] Odontologos encontrados
+[2024-05-27 13:43:32] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 13:44:26] [ INFO ] [PacienteDAOH2:52] Iniciado la busqueda de todos los pacientes
+[2024-05-27 13:44:26] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 13:44:26] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 2
+[2024-05-27 13:45:11] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 13:45:21] [ INFO ] [PacienteDAOH2:52] Iniciado la busqueda de todos los pacientes
+[2024-05-27 13:45:21] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 13:45:21] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 2
+[2024-05-27 13:47:08] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 13:50:07] [ INFO ] [PacienteDAOH2:52] Iniciado la busqueda de todos los pacientes
+[2024-05-27 13:50:07] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 13:50:07] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 2
+[2024-05-27 13:52:46] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 13:53:05] [ INFO ] [PacienteDAOH2:77] iniciando la operacion de buscado de un paciente con id : 1
+[2024-05-27 13:53:05] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 13:53:27] [ INFO ] [PacienteDAOH2:114] Iniciando busqueda por email: jorgito@jorgito.com
+[2024-05-27 13:53:27] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 13:56:26] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 13:56:31] [ INFO ] [PacienteDAOH2:52] Iniciado la busqueda de todos los pacientes
+[2024-05-27 13:56:31] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 13:56:31] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 2
+[2024-05-27 14:01:30] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 14:02:06] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 14:02:29] [ INFO ] [PacienteDAOH2:20] Iniciando las operaciones de guardado
+[2024-05-27 14:02:29] [ INFO ] [DomicilioDAOH2:18] Iniciando operacion de guardado
+[2024-05-27 14:02:29] [ ERROR] [PacienteDAOH2:45] Cannot invoke "BackEndHD.ClinicaOdontologica.model.Domicilio.getId()" because "domicilio" is null
+[2024-05-27 14:02:38] [ INFO ] [PacienteDAOH2:52] Iniciado la busqueda de todos los pacientes
+[2024-05-27 14:02:38] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 14:02:38] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 2
+[2024-05-27 14:02:56] [ INFO ] [PacienteDAOH2:52] Iniciado la busqueda de todos los pacientes
+[2024-05-27 14:02:56] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 14:02:56] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 2
+[2024-05-27 14:05:13] [ INFO ] [PacienteDAOH2:20] Iniciando las operaciones de guardado
+[2024-05-27 14:05:13] [ INFO ] [DomicilioDAOH2:18] Iniciando operacion de guardado
+[2024-05-27 14:05:14] [ ERROR] [PacienteDAOH2:45] Cannot invoke "BackEndHD.ClinicaOdontologica.model.Domicilio.getId()" because "domicilio" is null
+[2024-05-27 14:15:20] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 14:15:26] [ INFO ] [PacienteDAOH2:20] Iniciando las operaciones de guardado
+[2024-05-27 14:15:26] [ INFO ] [DomicilioDAOH2:19] Iniciando operacion de guardado
+[2024-05-27 14:15:26] [ INFO ] [DomicilioDAOH2:38] Domicilio guardado
+[2024-05-27 14:15:26] [ ERROR] [PacienteDAOH2:45] Valor Invalido "6" para el parametro "parameterIndex"
+Invalid value "6" for parameter "parameterIndex" [90008-214]
+[2024-05-27 14:15:38] [ INFO ] [PacienteDAOH2:52] Iniciado la busqueda de todos los pacientes
+[2024-05-27 14:15:38] [ INFO ] [DomicilioDAOH2:54] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 14:15:38] [ INFO ] [DomicilioDAOH2:54] iniciando la busqueda de un domicilio con id: 2
+[2024-05-27 14:17:21] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 14:17:28] [ INFO ] [PacienteDAOH2:20] Iniciando las operaciones de guardado
+[2024-05-27 14:17:28] [ INFO ] [DomicilioDAOH2:19] Iniciando operacion de guardado
+[2024-05-27 14:17:28] [ INFO ] [DomicilioDAOH2:38] Domicilio guardado
+[2024-05-27 14:17:28] [ INFO ] [PacienteDAOH2:42] Paciente guardado
+[2024-05-27 14:17:34] [ INFO ] [PacienteDAOH2:52] Iniciado la busqueda de todos los pacientes
+[2024-05-27 14:17:34] [ INFO ] [DomicilioDAOH2:54] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 14:17:34] [ INFO ] [DomicilioDAOH2:54] iniciando la busqueda de un domicilio con id: 2
+[2024-05-27 14:17:34] [ INFO ] [DomicilioDAOH2:54] iniciando la busqueda de un domicilio con id: 3

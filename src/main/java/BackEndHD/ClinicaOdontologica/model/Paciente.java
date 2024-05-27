@@ -15,6 +15,9 @@ public class Paciente {
     private Domicilio domicilio;
     private String email;
 
+    public Paciente() {
+    }
+
     public Paciente(String nombre, String apellido, String cedula, LocalDate fechaIngreso, Domicilio domicilio, String email) {
         this.nombre = nombre;
         this.apellido = apellido;

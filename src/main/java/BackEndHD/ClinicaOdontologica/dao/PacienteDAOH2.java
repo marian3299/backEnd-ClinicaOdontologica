@@ -11,7 +11,7 @@ import java.util.List;
 public class PacienteDAOH2 implements IDao<Paciente> {
     private static final Logger logger= Logger.getLogger(PacienteDAOH2.class);
     private static final String SQL_SELECT_ONE="SELECT * FROM PACIENTES WHERE ID=?";
-    private static final String SQL_INSERT = "INSERT INTO PACIENTES(NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES(?,?,?,?,?)";
+    private static final String SQL_INSERT = "INSERT INTO PACIENTES(NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES(?,?,?,?,?,?)";
     private static final String SQL_SELECT_BY_EMAIL="SELECT * FROM PACIENTES WHERE EMAIL=?";
     private static final String SQL_SELECT_ALL="SELECT * FROM PACIENTES";
 
@@ -27,7 +27,7 @@ public class PacienteDAOH2 implements IDao<Paciente> {
             PreparedStatement psInsert = connection.prepareStatement(SQL_INSERT, Statement.RETURN_GENERATED_KEYS);
             psInsert.setString(1, paciente.getNombre());
             psInsert.setString(2, paciente.getApellido());
-            psInsert.setString(3, paciente.toString());
+            psInsert.setString(3, paciente.getCedula());
             psInsert.setDate(4, Date.valueOf(paciente.getFechaIngreso()));
             psInsert.setInt(5, domicilio.getId());
             psInsert.setString(6, paciente.getEmail());
@@ -62,7 +62,7 @@ public class PacienteDAOH2 implements IDao<Paciente> {
 
             while (rs.next()){
                 domicilio = daoAux.buscarPorId(rs.getInt(6));
-                Paciente paciente= new Paciente(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getDate(5).toLocalDate(),domicilio, rs.getString(6));
+                Paciente paciente= new Paciente(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getDate(5).toLocalDate(),domicilio, rs.getString(7));
                 pacientes.add(paciente);
             }
         }catch (Exception e){
