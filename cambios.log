@@ -60,3 +60,30 @@ SELECT * FROM PACIENTES WHERE EMAIL=? [42104-214]
 [2024-05-23 19:15:16] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
 [2024-05-23 19:15:25] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
 [2024-05-23 19:15:25] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-24 13:10:20] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-24 13:10:39] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-24 13:10:39] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-24 13:10:46] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-24 13:10:46] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-24 13:10:56] [ INFO ] [PacienteDAOH2:114] Iniciando busqueda por email: jorgito@jorgito.com
+[2024-05-24 13:10:56] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 11:03:46] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 11:04:42] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-27 11:04:42] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-27 13:06:12] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 13:06:37] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-27 13:06:37] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-27 13:07:22] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-27 13:07:22] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-27 13:07:23] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-27 13:07:23] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-27 13:07:23] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-27 13:07:23] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-27 13:07:31] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 13:07:37] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-27 13:07:37] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-27 13:08:55] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-27 13:08:55] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-27 13:10:47] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 13:11:44] [ INFO ] [PacienteDAOH2:114] Iniciando busqueda por email: jorgito@jorgito.com
+[2024-05-27 13:11:44] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
