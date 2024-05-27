@@ -87,3 +87,27 @@ SELECT * FROM PACIENTES WHERE EMAIL=? [42104-214]
 [2024-05-27 13:10:47] [ INFO ] [BD:35] Tablas creada con exito
 [2024-05-27 13:11:44] [ INFO ] [PacienteDAOH2:114] Iniciando busqueda por email: jorgito@jorgito.com
 [2024-05-27 13:11:44] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 13:19:19] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 13:23:40] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 13:27:29] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 13:27:39] [ INFO ] [OdontologoDAOH2:37] Odonologo guardado correctamente
+[2024-05-27 13:28:02] [ INFO ] [PacienteDAOH2:114] Iniciando busqueda por email: jorgito@jorgito.com
+[2024-05-27 13:28:02] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 13:28:06] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-27 13:28:06] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-27 13:28:32] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-27 13:28:32] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-27 13:28:41] [ INFO ] [PacienteDAOH2:114] Iniciando busqueda por email: jorgito@jorgito.com
+[2024-05-27 13:28:41] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 13:29:09] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 13:29:21] [ INFO ] [OdontologoDAOH2:70] Iniciando busqueda de Odontologo
+[2024-05-27 13:29:21] [ INFO ] [OdontologoDAOH2:84] Odontologo encontrado
+[2024-05-27 13:29:57] [ INFO ] [PacienteDAOH2:114] Iniciando busqueda por email: jorgito@jorgito.com
+[2024-05-27 13:29:57] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 13:30:16] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 13:30:25] [ INFO ] [PacienteDAOH2:114] Iniciando busqueda por email: jorgito@jorgito.com
+[2024-05-27 13:30:25] [ INFO ] [DomicilioDAOH2:44] iniciando la busqueda de un domicilio con id: 1
+[2024-05-27 13:35:11] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-27 13:35:43] [ INFO ] [OdontologoDAOH2:61] Odontologos encontrados
+[2024-05-27 13:36:18] [ INFO ] [OdontologoDAOH2:37] Odonologo guardado correctamente
+[2024-05-27 13:36:24] [ INFO ] [OdontologoDAOH2:61] Odontologos encontrados
