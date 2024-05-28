@@ -28,4 +28,8 @@ public class PacienteService {
     public List<Paciente> buscarTodos(){
         return pacienteiDao.listarTodos();
     }
+
+    public void actualizarPaciente(Paciente paciente){
+         pacienteiDao.actualizar(paciente);
+    }
 }

@@ -29,15 +29,24 @@ public class PacienteController {
     }
 
     @GetMapping("/buscarEmail/{email}")
-    public String buscarPacientePorCorreo(Model model, @PathVariable("email") String email){
-        Paciente paciente = pacienteService.buscarPorEmail(email);
-        model.addAttribute("nombre", paciente.getNombre());
-        model.addAttribute("apellido", paciente.getApellido());
-        return "index"; //En postman no nos va a devolver el html porque cambiamos a RestController para poder probar en postman
+    public Paciente buscarPacientePorCorreo(@PathVariable("email") String email){
+        return pacienteService.buscarPorEmail(email); //En postman no nos va a devolver el html porque cambiamos a RestController para poder probar en postman
     }
 
-    @PostMapping("/guardar")
+    @PostMapping
     public Paciente guardarPaciente(@RequestBody Paciente paciente){
         return pacienteService.guardarPaciente(paciente);
+    }
+
+    @PutMapping
+    public String actualizarPaciente(@RequestBody Paciente paciente){
+        Paciente pacienteBuscado = pacienteService.buscarPorID(paciente.getId());
+
+        if(pacienteBuscado != null){
+            pacienteService.actualizarPaciente(paciente);
+            return "Paciente actualizado con exito";
+        }else {
+            return "Paciente no encontrado";
+        }
     }
 }

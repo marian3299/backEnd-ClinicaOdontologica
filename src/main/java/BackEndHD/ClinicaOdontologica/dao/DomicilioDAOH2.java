@@ -12,7 +12,8 @@ import java.util.List;
 public class DomicilioDAOH2 implements IDao<Domicilio> {
     private static final Logger logger= Logger.getLogger(DomicilioDAOH2.class);
     private static final String SQL_SELECT_ONE="SELECT * FROM DOMICILIOS WHERE ID=?";
-    private static final String SQL_INSERT="INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES(?,?,?,?)        ";
+    private static final String SQL_INSERT="INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES(?,?,?,?)";
+    private static final String SQL_UPDATE = "UPDATE DOMICILIOS SET CALLE=?, NUMERO=?, LOCALIDAD=?, PROVINCIA=? WHERE ID=?";
     @Override
     public Domicilio guardar(Domicilio domicilio) {
 
@@ -76,7 +77,23 @@ public class DomicilioDAOH2 implements IDao<Domicilio> {
 
     @Override
     public void actualizar(Domicilio domicilio) {
+        logger.info("Iniciando actualizacion de domicilio con id: " + domicilio.getId());
+        Connection connection = null;
 
+        try {
+            connection = BD.getConnection();
+
+            PreparedStatement psUpdate = connection.prepareStatement(SQL_UPDATE);
+            psUpdate.setString(1, domicilio.getCalle());
+            psUpdate.setInt(2, domicilio.getNumero());
+            psUpdate.setString(3, domicilio.getLocalidad());
+            psUpdate.setString(4, domicilio.getProvincia());
+            psUpdate.setInt(5, domicilio.getId());
+            psUpdate.execute();
+            
+        }catch (Exception e){
+            logger.error(e.getMessage());
+        }
     }
 
     @Override

@@ -14,10 +14,11 @@ public class PacienteDAOH2 implements IDao<Paciente> {
     private static final String SQL_INSERT = "INSERT INTO PACIENTES(NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES(?,?,?,?,?,?)";
     private static final String SQL_SELECT_BY_EMAIL="SELECT * FROM PACIENTES WHERE EMAIL=?";
     private static final String SQL_SELECT_ALL="SELECT * FROM PACIENTES";
+    private static final String SQL_UPDATE = "UPDATE PACIENTES SET NOMBRE=?, APELLIDO=?, CEDULA=?, FECHA_INGRESO=?, DOMICILIO_ID=?, EMAIL=? WHERE ID=?";
 
     @Override
     public Paciente guardar(Paciente paciente) {
-        logger.info("Iniciando las operaciones de guardado");
+        logger.info("Iniciando las operaciones de guardado: " + paciente.getNombre());
         Connection connection = null;
         DomicilioDAOH2 daoAux = new DomicilioDAOH2();
         Domicilio domicilio = daoAux.guardar(paciente.getDomicilio());
@@ -87,7 +88,7 @@ public class PacienteDAOH2 implements IDao<Paciente> {
             DomicilioDAOH2 daoAux= new DomicilioDAOH2();
             while(rs.next()){
                 domicilio= daoAux.buscarPorId(rs.getInt(6));
-                paciente= new Paciente(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getDate(5).toLocalDate(),domicilio, rs.getString(6));
+                paciente= new Paciente(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getDate(5).toLocalDate(),domicilio, rs.getString(7));
             }
 
 
@@ -106,7 +107,27 @@ public class PacienteDAOH2 implements IDao<Paciente> {
 
     @Override
     public void actualizar(Paciente paciente) {
+        logger.warn("Iniciando la actualizacion de paciente con id: " + paciente.getId());
+        Connection connection = null;
+        DomicilioDAOH2 doaAux = new DomicilioDAOH2();
 
+        try{
+            connection = BD.getConnection();
+            doaAux.actualizar(paciente.getDomicilio());
+
+            PreparedStatement psUpadte = connection.prepareStatement(SQL_UPDATE);
+            psUpadte.setString(1, paciente.getNombre());
+            psUpadte.setString(2, paciente.getApellido());
+            psUpadte.setString(3, paciente.getCedula());
+            psUpadte.setDate(4, Date.valueOf(paciente.getFechaIngreso()));
+            psUpadte.setInt(5, paciente.getDomicilio().getId());
+            psUpadte.setString(6, paciente.getEmail());
+            psUpadte.setInt(7, paciente.getId());
+            psUpadte.execute();
+
+        }catch (Exception e){
+            logger.error(e.getMessage());
+        }
     }
 
     @Override
@@ -126,7 +147,7 @@ public class PacienteDAOH2 implements IDao<Paciente> {
 
             while (rs.next()){
                 domicilio = daoAux.buscarPorId(rs.getInt(6));
-                paciente= new Paciente(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getDate(5).toLocalDate(),domicilio, rs.getString(6));
+                paciente= new Paciente(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getDate(5).toLocalDate(),domicilio, rs.getString(7));
             }
 
         }catch (Exception e){
