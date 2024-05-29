@@ -15,6 +15,8 @@ public class OdontologoDAOH2 implements IDao<Odontologo>{
     private static final String SQL_INSERT = "INSERT INTO ODONTOLOGOS(MATRICULA, NOMBRE, APELLIDO) VALUES(?,?,?)";
     private static final String SQL_SEARCH_ALL = "SELECT * FROM ODONTOLOGOS";
     private static final String SQL_SEARCH_ONE = "SELECT * FROM ODONTOLOGOS WHERE ID=?";
+    private static final String SQL_DELETE = "DELETE FROM ODONTOLOGOS WHERE ID=?";
+    private static final String SQL_UPDATE = "UPDATE ODONTOLOGOS SET MATRICULA=?, NOMBRE=?, APELLIDO=? WHERE ID=?";
 
     @Override
     public Odontologo guardar(Odontologo odontologo) {
@@ -92,11 +94,40 @@ public class OdontologoDAOH2 implements IDao<Odontologo>{
 
     @Override
     public void eliminar(Integer id) {
+        logger.info("Iniciando eliminacion de odontologo con id: " + id);
+        Connection connection = null;
+
+        try{
+            connection = BD.getConnection();
+
+            PreparedStatement psDelete = connection.prepareStatement(SQL_DELETE);
+            psDelete.setInt(1, id);
+            psDelete.execute();
+
+        }catch (Exception e){
+            logger.error(e.getMessage());
+        }
+
 
     }
 
     @Override
     public void actualizar(Odontologo odontologo) {
+        logger.info("Iniciando actualizacion de odontologo con id " + odontologo.getId());
+        Connection connection = null;
+
+        try{
+            connection = BD.getConnection();
+            PreparedStatement psUpdate = connection.prepareStatement(SQL_UPDATE);
+            psUpdate.setInt(1, odontologo.getMatricula());
+            psUpdate.setString(2, odontologo.getNombre());
+            psUpdate.setString(3, odontologo.getApellido());
+            psUpdate.setInt(4, odontologo.getId());
+            psUpdate.execute();
+
+        }catch (Exception e){
+            logger.error(e.getMessage());
+        }
 
     }
 
