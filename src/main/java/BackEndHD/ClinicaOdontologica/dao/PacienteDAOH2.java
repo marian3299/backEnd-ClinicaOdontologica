@@ -15,6 +15,7 @@ public class PacienteDAOH2 implements IDao<Paciente> {
     private static final String SQL_SELECT_BY_EMAIL="SELECT * FROM PACIENTES WHERE EMAIL=?";
     private static final String SQL_SELECT_ALL="SELECT * FROM PACIENTES";
     private static final String SQL_UPDATE = "UPDATE PACIENTES SET NOMBRE=?, APELLIDO=?, CEDULA=?, FECHA_INGRESO=?, DOMICILIO_ID=?, EMAIL=? WHERE ID=?";
+    private static final String SQL_DELETE = "DELETE FROM PACIENTES WHERE ID=?";
 
     @Override
     public Paciente guardar(Paciente paciente) {
@@ -102,7 +103,21 @@ public class PacienteDAOH2 implements IDao<Paciente> {
 
     @Override
     public void eliminar(Integer id) {
+        logger.info("Iniciando eliminacion de paciente con id: " + id);
+        Connection connection = null;
+        DomicilioDAOH2 daoAux = new DomicilioDAOH2();
 
+        try{
+            connection = BD .getConnection();
+            daoAux.eliminar(id);
+
+            PreparedStatement psDelete = connection.prepareStatement(SQL_DELETE);
+            psDelete.setInt(1,id);
+            psDelete.execute();
+
+        }catch (Exception e){
+            logger.error(e.getMessage());
+        }
     }
 
     @Override

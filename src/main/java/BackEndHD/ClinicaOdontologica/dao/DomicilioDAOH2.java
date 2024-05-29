@@ -14,6 +14,7 @@ public class DomicilioDAOH2 implements IDao<Domicilio> {
     private static final String SQL_SELECT_ONE="SELECT * FROM DOMICILIOS WHERE ID=?";
     private static final String SQL_INSERT="INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES(?,?,?,?)";
     private static final String SQL_UPDATE = "UPDATE DOMICILIOS SET CALLE=?, NUMERO=?, LOCALIDAD=?, PROVINCIA=? WHERE ID=?";
+    private static final String SQL_DELETE = "DELETE FROM DOMICILIOS WHERE ID=?";
     @Override
     public Domicilio guardar(Domicilio domicilio) {
 
@@ -72,7 +73,18 @@ public class DomicilioDAOH2 implements IDao<Domicilio> {
 
     @Override
     public void eliminar(Integer id) {
+        logger.info("Iniciando eliminacion de domicilio con id: " + id);
+        Connection connection = null;
 
+        try {
+            connection = BD.getConnection();
+            PreparedStatement psDelete = connection.prepareStatement(SQL_DELETE);
+            psDelete.setInt(1, id);
+            psDelete.execute();
+
+        }catch (Exception e){
+            logger.error(e.getMessage());
+        }
     }
 
     @Override
@@ -90,7 +102,7 @@ public class DomicilioDAOH2 implements IDao<Domicilio> {
             psUpdate.setString(4, domicilio.getProvincia());
             psUpdate.setInt(5, domicilio.getId());
             psUpdate.execute();
-            
+
         }catch (Exception e){
             logger.error(e.getMessage());
         }

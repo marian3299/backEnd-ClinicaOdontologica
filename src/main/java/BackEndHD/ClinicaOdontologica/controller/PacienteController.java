@@ -49,4 +49,16 @@ public class PacienteController {
             return "Paciente no encontrado";
         }
     }
+
+    @DeleteMapping("eliminar/{id}")
+    public String eliminarPaciente(@PathVariable("id") Integer id){
+        Paciente paciente = pacienteService.buscarPorID(id);
+
+        if(paciente != null){
+            pacienteService.eliminarPaciente(id);
+            return "Paciente eliminado con exito";
+        }else {
+            return "Paciente no encontrado";
+        }
+    }
 }

@@ -201,3 +201,11 @@ Invalid value "6" for parameter "parameterIndex" [90008-214]
 [2024-05-28 17:35:11] [ INFO ] [DomicilioDAOH2:55] iniciando la busqueda de un domicilio con id: 2
 [2024-05-28 17:35:11] [ INFO ] [DomicilioDAOH2:55] iniciando la busqueda de un domicilio con id: 3
 [2024-05-28 17:35:23] [ INFO ] [PacienteDAOH2:78] iniciando la operacion de buscado de un paciente con id : 4
+[2024-05-28 17:52:14] [ INFO ] [BD:35] Tablas creada con exito
+[2024-05-28 17:52:55] [ INFO ] [PacienteDAOH2:79] iniciando la operacion de buscado de un paciente con id : 1
+[2024-05-28 17:52:55] [ INFO ] [DomicilioDAOH2:56] iniciando la busqueda de un domicilio con id: 1
+[2024-05-28 17:52:55] [ INFO ] [PacienteDAOH2:106] Iniciando eliminacion de paciente con id: 1
+[2024-05-28 17:52:55] [ INFO ] [DomicilioDAOH2:76] Iniciando eliminacion de domicilio con id: 1
+[2024-05-28 17:52:59] [ INFO ] [PacienteDAOH2:54] Iniciado la busqueda de todos los pacientes
+[2024-05-28 17:52:59] [ INFO ] [DomicilioDAOH2:56] iniciando la busqueda de un domicilio con id: 2
+[2024-05-28 17:53:09] [ INFO ] [PacienteDAOH2:79] iniciando la operacion de buscado de un paciente con id : 1
