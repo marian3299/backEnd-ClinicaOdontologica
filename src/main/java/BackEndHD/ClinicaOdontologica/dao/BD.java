@@ -16,6 +16,9 @@ public class BD {
     private static final String SQL_DROP_CREATE_DOM="DROP TABLE IF EXISTS DOMICILIOS; " +
             "CREATE TABLE DOMICILIOS (ID INT AUTO_INCREMENT PRIMARY KEY, CALLE VARCHAR(100) NOT NULL, NUMERO INT NOT NULL, LOCALIDAD VARCHAR(100) NOT NULL, PROVINCIA VARCHAR(100) NOT NULL)";
 
+    private static final String SQL_DROP_CREATE_TURNOS = "DROP TABLE IF EXISTS TURNOS; " +
+            "CREATE TABLE TURNOS(ID INT AUTO_INCREMENT PRIMARY KEY, PACIENTE_ID INT NOT NULL, ODONTOLOGO_ID INT NOT NULL, FECHA_Y_HORA DATETIME NOT NULL)";
+
     private static final String SQL_PRUEBA="INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1, 'jorgito@jorgito.com'), ('German','Fraire','22222','2024-05-10',2, 'german@german.com'); " +
             "INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay')";
     private static final String SQL_PRUEBA_ODONT="INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES" +
@@ -30,6 +33,7 @@ public class BD {
             stmt.execute(SQL_DROP_CREATE_ODONT);
             stmt.execute(SQL_DROP_CREATE_DOM);
             stmt.execute(SQL_DROP_CREATE_PAC);
+            stmt.execute(SQL_DROP_CREATE_TURNOS);
             stmt.execute(SQL_PRUEBA);
             stmt.execute(SQL_PRUEBA_ODONT);
             logger.info("Tablas creada con exito");
